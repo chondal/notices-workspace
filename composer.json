@@ -1,0 +1,27 @@
+{
+    "name": "chondal/notices-workspace",
+    "description": "Paquete para gestionar las notificaciones entre los diferentes espacios de administracion",
+    "authors": [
+        {
+            "name": "Jonathan",
+            "email": "jg.pradi@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Chondal\\NoticesWorkspace\\" : "src/"
+        },
+        "files" : ["src/NoticeHelper.php"]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chondal\\NoticesWorkspace\\NoticesWorkspaceServiceProvider"
+            ],
+            "aliases": {
+                "NoticeWorkspace": "Chondal\\NoticesWorkspace\\Facades\\NoticesWorkspace"
+            }
+        }
+    }
+}
